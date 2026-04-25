@@ -1,0 +1,108 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: rgba(3, 6, 16, 0.9);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.logoIcon {
+  font-size: 1.4rem;
+  display: inline-block;
+  background: linear-gradient(135deg, #00e5ff, #bf00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(0,229,255,0.6));
+}
+
+.logoText {
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 12px var(--neon-cyan), 0 0 24px rgba(0,229,255,0.4);
+  letter-spacing: 0.05em;
+}
+
+.logoPop {
+  animation: logo-pop 0.5s ease;
+}
+
+.logoRainbow .logoText {
+  animation: rainbow-shift 0.4s linear infinite;
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.playerBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  color: var(--neon-green);
+  background: rgba(0,255,136,0.08);
+  border: 1px solid rgba(0,255,136,0.2);
+  padding: 4px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--neon-green);
+  box-shadow: 0 0 6px var(--neon-green);
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.clock {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.timeStr {
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 8px rgba(0,229,255,0.5);
+  letter-spacing: 0.05em;
+}
+
+.dateStr {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+@media (max-width: 480px) {
+  .logoText { font-size: 1rem; }
+  .timeStr { font-size: 0.75rem; }
+  .dateStr { display: none; }
+  .playerBadge { font-size: 0.7rem; padding: 3px 10px; }
+}

@@ -1,0 +1,171 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: slide-in-up 0.5s ease;
+}
+
+.title {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  color: var(--neon-cyan);
+  text-align: center;
+  text-shadow: 0 0 12px rgba(0,229,255,0.5);
+  letter-spacing: 0.05em;
+}
+
+.sub {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.sub strong {
+  color: var(--neon-green);
+}
+
+/* Emoji rating */
+.emojiRow {
+  display: flex;
+  justify-content: space-around;
+  gap: 6px;
+}
+
+.emojiBtn {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 10px 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.emojiBtn:hover {
+  background: rgba(0,229,255,0.08);
+  border-color: var(--neon-cyan);
+  transform: translateY(-4px);
+}
+
+.emojiBtnActive {
+  background: rgba(0,229,255,0.12) !important;
+  border-color: var(--neon-cyan) !important;
+  box-shadow: 0 0 14px rgba(0,229,255,0.3);
+  transform: translateY(-4px) scale(1.08);
+}
+
+.emojiChar {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.emojiLabel {
+  font-family: var(--font-head);
+  font-size: 0.55rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ratingDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(0,229,255,0.06);
+  border-radius: 10px;
+  border: 1px solid rgba(0,229,255,0.15);
+  animation: zoom-pop 0.3s ease;
+}
+
+.ratingEmoji { font-size: 2rem; }
+
+.ratingLabel {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 8px rgba(0,229,255,0.4);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-family: var(--font-head);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.charCount {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btns button { flex: 1; min-width: 140px; }
+
+/* Thank you */
+.thankEmoji {
+  font-size: 4rem;
+  text-align: center;
+  animation: float 2s ease-in-out infinite;
+}
+
+.thankTitle {
+  font-family: var(--font-head);
+  font-size: 1.4rem;
+  color: var(--neon-green);
+  text-shadow: 0 0 16px var(--neon-green);
+  text-align: center;
+}
+
+.thankMsg {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .card { padding: 24px 16px; }
+  .emojiChar { font-size: 1.4rem; }
+  .emojiLabel { display: none; }
+}
